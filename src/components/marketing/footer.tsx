@@ -31,13 +31,13 @@ const Footer = () => {
                         </h3>
                         <ul className="text-sm text-muted-foreground space-y-3">
                             <li>
-                                <Link href="#" className="hover:text-foreground transition-all duration-300">
+                                <Link href="https://chromewebstore.google.com/detail/hirehack-ai/pgjgjjkabhhjkaiaeofjfdelplcablbj" target="/" className="hover:text-foreground transition-all duration-300">
                                     Download Extension
                                 </Link>
                             </li>
                             <li>
                                 <Link href="#features" className="hover:text-foreground transition-all duration-300">
-                                    Features
+                                    How to use
                                 </Link>
                             </li>
                             <li>
@@ -50,11 +50,11 @@ const Footer = () => {
                                     FAQ
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link href="#testimonials" className="hover:text-foreground transition-all duration-300">
                                     Success Stories
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </Container>
 
@@ -65,12 +65,12 @@ const Footer = () => {
                         </h3>
                         <ul className="text-sm text-muted-foreground space-y-3">
                             <li>
-                                <Link href="#" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/blog" className="hover:text-foreground transition-all duration-300">
                                     Blog
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/refund" className="hover:text-foreground transition-all duration-300">
                                     Refund Policy
                                 </Link>
                             </li>
@@ -84,22 +84,22 @@ const Footer = () => {
                         </h3>
                         <ul className="text-sm text-muted-foreground space-y-3">
                             <li>
-                                <Link href="#" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/aboutus" className="hover:text-foreground transition-all duration-300">
                                     About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/contact" className="hover:text-foreground transition-all duration-300">
                                     Contact
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/privacy" className="hover:text-foreground transition-all duration-300">
                                     Privacy Policy
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/terms" className="hover:text-foreground transition-all duration-300">
                                     Terms of Service
                                 </Link>
                             </li>

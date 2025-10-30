@@ -61,7 +61,7 @@ const CTA = () => {
                     </p>
 
                     {/* CTA Button */}
-                    <Link href="#pricing" className="mt-8">
+                    <Link href="https://app.hirehack.ai" className="mt-8" target="/">
                         <Button
                             size="lg"
                             className="bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300"

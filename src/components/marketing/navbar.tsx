@@ -32,7 +32,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <Link href="#" className="hidden lg:block">
+                        <Link href="https://app.hirehack.ai" className="hidden lg:block" target="/">
                             <Button variant="orange">
                                 Get Started
                             </Button>
