@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "../global/container";
 import Icons from "../global/icons";
-import Images from "../global/images";
 import { Button } from "../ui/button";
 import Ripple from "../ui/ripple";
 
@@ -51,21 +50,24 @@ const Integration = () => {
     return (
         <div className="relative flex flex-col items-center justify-center w-full py-20">
             <Container className="relative">
-                {/* Mobile View */}
-                <div className="relative flex flex-col lg:hidden items-center justify-center overflow-visible">
-                    <div className="absolute top-1/2 -translate-y-1/2 right-1/4 w-3/5 h-14 lg:h-20 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full -rotate-12 blur-[6.5rem] -z-10"></div>
+                    {/* Mobile View */}
+                    <div className="relative flex flex-col lg:hidden items-center justify-center overflow-visible">
+                        <div className="absolute top-1/2 -translate-y-1/2 right-1/4 w-3/5 h-14 lg:h-20 
+                            bg-gradient-to-r from-orange-400 to-orange-500 rounded-full -rotate-12 blur-[6.5rem] -z-10"></div>
 
-                    <div className="max-w-sm w-full h-auto mx-auto mt-8">
-                        <Image
-                            src="/images/integration.svg"
-                            alt="HireHack Integration"
-                            width={1000}
-                            height={1000}
-                            className="w-full h-auto"
-                        />
+                        <div className="hidden md-hidden-block max-w-sm w-full h-auto mx-auto mt-8">
+                            <Image
+                                src="/icons/icon.png"
+                                alt="HireHack Logo"
+                                width={1000}
+                                height={1000}
+                                className="w-full h-auto"
+                                priority
+                            />
+                        </div>
                     </div>
-                </div>
-            </Container>
+                </Container>
+
 
             {/* Heading */}
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto lg:absolute lg:top-1/4 inset-x-0 mt-12 lg:mt-0">
@@ -73,7 +75,6 @@ const Integration = () => {
                     Seamless Platform <br />
                     <span className="font-subheading italic text-orange-500">Integrations</span>
                 </h2>
-     
             </div>
 
             {/* CTA */}
@@ -89,15 +90,25 @@ const Integration = () => {
             {/* Desktop Visual */}
             <Container delay={0.3}>
                 <div className="relative hidden lg:flex items-center justify-center overflow-visible">
-                    <div className="absolute top-1/2 -translate-y-1/2 right-1/4 w-3/5 h-14 lg:h-20 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full -rotate-12 blur-[6.5rem] -z-10"></div>
+                    {/* Orange Glow Background */}
+                    <div className="absolute top-1/2 -translate-y-1/2 right-1/4 w-3/5 h-14 lg:h-20 
+                        bg-gradient-to-r from-orange-400 to-orange-500 rounded-full -rotate-12 blur-[6.5rem] -z-10"></div>
 
+                    {/* Ripple Animation */}
                     <div className="relative flex h-dvh w-full flex-col items-center justify-center overflow-visible">
                         <Ripple />
                     </div>
 
-                    {/* HireHack Logo Center */}
+                    {/* HireHack Logo Center (using icon.png) */}
                     <div className="absolute z-20 flex items-center justify-center group">
-                        <Images.logo className="size-24 group-hover:scale-110 transition-all duration-500" />
+                        <Image
+                            src="/icons/icon.png"
+                            alt="HireHack Logo"
+                            width={96}
+                            height={96}
+                            className="rounded-full group-hover:scale-110 transition-all duration-500"
+                            priority
+                        />
                     </div>
 
                     {/* Platform Icons */}

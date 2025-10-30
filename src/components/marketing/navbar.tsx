@@ -1,6 +1,6 @@
 import { NAV_LINKS } from "@/constants";
 import Link from "next/link";
-import Icons from "../global/icons";
+import Image from "next/image";
 import Wrapper from "../global/wrapper";
 import { Button } from "../ui/button";
 import MobileMenu from "./mobile-menu";
@@ -10,19 +10,29 @@ const Navbar = () => {
         <header className="sticky top-0 w-full h-16 bg-background/80 backdrop-blur-sm z-50">
             <Wrapper className="h-full">
                 <div className="flex items-center justify-between h-full">
+                    
+                    {/* Brand Logo */}
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center gap-2">
-                            <Icons.icon className="w-6" />
+                            <Image
+                                src="/icons/icon.png"
+                                alt="HireHack Logo"
+                                width={28}
+                                height={28}
+                                className="object-contain"
+                                priority
+                            />
                             <span className="text-xl font-semibold hidden lg:block">
-                                HireHack AI
+                                HireHack
                             </span>
                         </Link>
                     </div>
 
+                    {/* Navigation Links (Desktop) */}
                     <div className="hidden lg:flex items-center gap-4">
                         <ul className="flex items-center gap-8">
                             {NAV_LINKS.map((link, index) => (
-                                <li key={index} className="text-sm font-medium -1 link">
+                                <li key={index} className="text-sm font-medium link">
                                     <Link href={link.href}>
                                         {link.name}
                                     </Link>
@@ -31,8 +41,14 @@ const Navbar = () => {
                         </ul>
                     </div>
 
+                    {/* Actions */}
                     <div className="flex items-center gap-4">
-                        <Link href="https://app.hirehack.ai" className="hidden lg:block" target="/">
+                        <Link
+                            href="https://app.hirehack.ai"
+                            className="hidden lg:block"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <Button variant="orange">
                                 Get Started
                             </Button>
@@ -42,7 +58,7 @@ const Navbar = () => {
                 </div>
             </Wrapper>
         </header>
-    )
+    );
 };
 
-export default Navbar
+export default Navbar;
