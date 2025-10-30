@@ -8,7 +8,7 @@ import Images from "../global/images";
 import { Button } from "../ui/button";
 import Ripple from "../ui/ripple";
 
-const SOCIAL_PLATFORMS = [
+const JOB_PLATFORMS = [
     { icon: Icons.linkedin, position: "left-3", size: "small", iconSize: "small", className: "hidden lg:flex" },
     { icon: Icons.tiktok, position: "left-2", size: "medium", iconSize: "medium" },
     { icon: Icons.insta, position: "left-1", size: "large", iconSize: "large" },
@@ -18,7 +18,6 @@ const SOCIAL_PLATFORMS = [
 ];
 
 const Integration = () => {
-
     const getPositionClasses = (position: string) => {
         switch (position) {
             case "left-3": return "-translate-x-[285px]";
@@ -50,38 +49,44 @@ const Integration = () => {
     };
 
     return (
-        <div className="relative flex flex-col items-center justify-center w-full py-20 scale-">
+        <div className="relative flex flex-col items-center justify-center w-full py-20">
             <Container className="relative">
+                {/* Mobile View */}
                 <div className="relative flex flex-col lg:hidden items-center justify-center overflow-visible">
                     <div className="absolute top-1/2 -translate-y-1/2 right-1/4 w-3/5 h-14 lg:h-20 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full -rotate-12 blur-[6.5rem] -z-10"></div>
 
                     <div className="max-w-sm w-full h-auto mx-auto mt-8">
                         <Image
                             src="/images/integration.svg"
-                            alt="Integration"
+                            alt="HireHack Integration"
                             width={1000}
                             height={1000}
                             className="w-full h-auto"
                         />
                     </div>
-
                 </div>
             </Container>
 
+            {/* Heading */}
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto lg:absolute lg:top-1/4 inset-x-0 mt-12 lg:mt-0">
                 <h2 className="text-2xl md:text-4xl lg:text-6xl font-heading font-semibold !leading-snug">
-                    Social Media Integration
+                    Seamless Platform <br />
+                    <span className="font-subheading italic text-orange-500">Integrations</span>
                 </h2>
+     
             </div>
+
+            {/* CTA */}
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto lg:absolute lg:bottom-1/4 inset-x-0 z-20 mt-8 lg:mt-0">
                 <Link href="#">
-                    <Button size="lg">
-                        See all Integrations
-                        <ArrowRightIcon className="size-4" />
+                    <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                        See All Integrations
+                        <ArrowRightIcon className="size-4 ml-2" />
                     </Button>
                 </Link>
             </div>
 
+            {/* Desktop Visual */}
             <Container delay={0.3}>
                 <div className="relative hidden lg:flex items-center justify-center overflow-visible">
                     <div className="absolute top-1/2 -translate-y-1/2 right-1/4 w-3/5 h-14 lg:h-20 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full -rotate-12 blur-[6.5rem] -z-10"></div>
@@ -90,11 +95,13 @@ const Integration = () => {
                         <Ripple />
                     </div>
 
+                    {/* HireHack Logo Center */}
                     <div className="absolute z-20 flex items-center justify-center group">
                         <Images.logo className="size-24 group-hover:scale-110 transition-all duration-500" />
                     </div>
 
-                    {SOCIAL_PLATFORMS.map((platform, index) => (
+                    {/* Platform Icons */}
+                    {JOB_PLATFORMS.map((platform, index) => (
                         <div
                             key={index}
                             className={cn(
@@ -106,17 +113,16 @@ const Integration = () => {
                         >
                             <platform.icon
                                 className={cn(
-                                    "size-auto text-foreground",
+                                    "text-foreground",
                                     getIconSizeClasses(platform.iconSize)
                                 )}
                             />
                         </div>
                     ))}
-
                 </div>
             </Container>
         </div>
-    )
+    );
 };
 
 export default Integration;

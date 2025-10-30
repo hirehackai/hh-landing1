@@ -9,42 +9,43 @@ const Analysis = () => {
             <Container>
                 <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug">
-                        Intelligent marketing <br />
-                        <span className="font-subheading italic">dashboard</span>
+                        Smart Job Application <br />
+                        <span className="font-subheading italic">Analytics Dashboard</span>
                     </h2>
                     <p className="text-base md:text-lg text-accent-foreground/80 mt-4">
-                        Gain detailed insights into your marketing performance and campaign metrics with our advanced analytics tools.
+                        Track your applications, success rate, and platform performance — all in one place.
+                        See how HireHack automates your job search and boosts interview calls.
                     </p>
                 </div>
             </Container>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative w-full items-stretch">
 
-                {/* Campaign Insights Card */}
+                {/* Job Application Insights Card */}
                 <Container delay={0.2}>
-                    <div className="rounded-2xl bg-background/40 relative border border-border/50">
+                    <div className="rounded-2xl bg-background/40 relative border border-border/50 h-full">
                         <MagicCard
-                            gradientFrom="#FF7E00" // deep orange
-                            gradientTo="#FFD580"   // light amber
-                            gradientColor="rgba(255, 140, 0, 0.15)" // warm orange glow
-                            className="p-4 lg:p-8 w-full overflow-hidden"
+                            gradientFrom="#FF7E00"
+                            gradientTo="#FFD580"
+                            gradientColor="rgba(255, 140, 0, 0.15)"
+                            className="p-4 lg:p-8 w-full h-full flex flex-col justify-between overflow-hidden"
                         >
                             <div className="absolute bottom-0 right-0 bg-orange-500 w-1/4 h-1/4 blur-[8rem] z-20"></div>
                             <div className="space-y-4">
                                 <h3 className="text-xl font-semibold">
-                                    Campaign Insights
+                                    Application Insights
                                 </h3>
                                 <p className="text-sm text-muted-foreground">
-                                    Track your campaign performance with data-driven insights.
+                                    Real-time view of how your applications are performing across platforms.
                                 </p>
 
                                 <div className="space-y-4">
                                     <div className="flex justify-between items-baseline">
                                         <div>
-                                            <div className="text-3xl font-semibold">$12,834</div>
+                                            <div className="text-3xl font-semibold">5,284</div>
                                             <div className="text-sm text-green-500 flex items-center gap-1 mt-2">
                                                 <TrendingUpIcon className="w-4 h-4" />
-                                                +25% from last month
+                                                +18% more jobs applied this week
                                             </div>
                                         </div>
                                         <div className="flex gap-2">
@@ -59,21 +60,25 @@ const Analysis = () => {
 
                                     <div className="space-y-2">
                                         <div className="grid grid-cols-4 text-sm text-muted-foreground py-2">
-                                            <div>Campaign</div>
+                                            <div>Platform</div>
                                             <div>Status</div>
-                                            <div>Reach</div>
-                                            <div>ROI</div>
+                                            <div>Applications</div>
+                                            <div>Success</div>
                                         </div>
                                         {[
-                                            { name: "Sales", status: "Active", reach: "45K", roi: "+32%" },
-                                            { name: "Emails", status: "Done", reach: "28K", roi: "+18%" },
-                                            { name: "Ads", status: "Active", reach: "62K", roi: "+45%" },
-                                        ].map((campaign) => (
-                                            <div key={campaign.name} className="grid grid-cols-4 text-sm py-2 border-t border-border/50">
-                                                <div>{campaign.name}</div>
-                                                <div>{campaign.status}</div>
-                                                <div>{campaign.reach}</div>
-                                                <div className="font-semibold">{campaign.roi}</div>
+                                            { name: "LinkedIn", status: "Active", apps: "213", success: "91%" },
+                                            { name: "Indeed", status: "Active", apps: "173", success: "89%" },
+                                            { name: "Handshake", status: "Active", apps: "182", success: "88%" },
+                                            { name: "Glassdoor", status: "Pending", apps: "22", success: "90%" },
+                                        ].map((platform) => (
+                                            <div
+                                                key={platform.name}
+                                                className="grid grid-cols-4 text-sm py-2 border-t border-border/50"
+                                            >
+                                                <div>{platform.name}</div>
+                                                <div>{platform.status}</div>
+                                                <div>{platform.apps}</div>
+                                                <div className="font-semibold">{platform.success}</div>
                                             </div>
                                         ))}
                                     </div>
@@ -83,29 +88,29 @@ const Analysis = () => {
                     </div>
                 </Container>
 
-                {/* Audience Metrics Card */}
+                {/* Interview Success Metrics Card */}
                 <Container delay={0.2}>
-                    <div className="rounded-2xl bg-background/40 relative border border-border/50">
+                    <div className="rounded-2xl bg-background/40 relative border border-border/50 h-full">
                         <MagicCard
                             gradientFrom="#FF7E00"
                             gradientTo="#FFD580"
                             gradientColor="rgba(255, 140, 0, 0.15)"
-                            className="p-4 lg:p-8 w-full overflow-hidden"
+                            className="p-4 lg:p-8 w-full h-full flex flex-col justify-between overflow-hidden"
                         >
                             <div className="absolute bottom-0 right-0 bg-orange-500 w-1/4 h-1/4 blur-[8rem] z-20"></div>
                             <div className="space-y-4">
-                                <h3 className="text-xl font-semibold">Audience Metrics</h3>
+                                <h3 className="text-xl font-semibold">Interview Success Metrics</h3>
                                 <p className="text-sm text-muted-foreground">
-                                    Understand your audience behavior and engagement patterns.
+                                    See how your auto-applied jobs are converting into real interview calls.
                                 </p>
 
                                 <div className="space-y-4">
                                     <div className="flex justify-between items-baseline">
                                         <div>
-                                            <div className="text-3xl font-semibold">84,392</div>
+                                            <div className="text-3xl font-semibold">91%</div>
                                             <div className="text-sm text-green-500 flex items-center gap-1 mt-2">
                                                 <TrendingUpIcon className="w-4 h-4" />
-                                                +12% engagement rate
+                                                Users reporting faster interview calls
                                             </div>
                                         </div>
                                         <div className="flex gap-2">
@@ -119,22 +124,68 @@ const Analysis = () => {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <div className="grid grid-cols-4 text-sm text-muted-foreground py-2">
-                                            <div>Channel</div>
-                                            <div>Users</div>
-                                            <div>Sessions</div>
-                                            <div>Conv. Rate</div>
+                                        <div className="grid grid-cols-5 text-sm text-muted-foreground py-2">
+                                            <div>Company</div>
+                                            <div>Position</div>
+                                            <div>Applied Date</div>
+                                            <div>Platform</div>
+                                            <div>Status</div>
                                         </div>
+
                                         {[
-                                            { channel: "Social", users: "32K", sessions: "45K", rate: "3.2%" },
-                                            { channel: "Email", users: "28K", sessions: "36K", rate: "4.5%" },
-                                            { channel: "Direct", users: "15K", sessions: "22K", rate: "5.1%" },
-                                        ].map((metric) => (
-                                            <div key={metric.channel} className="grid grid-cols-4 text-sm py-2 border-t border-border/50">
-                                                <div>{metric.channel}</div>
-                                                <div>{metric.users}</div>
-                                                <div>{metric.sessions}</div>
-                                                <div className="font-semibold">{metric.rate}</div>
+                                            {
+                                                company: "LinkedIn",
+                                                position: "Software Engineer",
+                                                date: "Oct 20, 2025",
+                                                platform: "LinkedIn",
+                                                status: "In Review",
+                                            },
+                                            {
+                                                company: "Microsoft",
+                                                position: "Full Stack Developer",
+                                                date: "Oct 18, 2025",
+                                                platform: "Indeed",
+                                                status: "Interview Scheduled",
+                                            },
+                                            {
+                                                company: "Stripe",
+                                                position: "Backend Engineer",
+                                                date: "Oct 16, 2025",
+                                                platform: "Glassdoor",
+                                                status: "Applied",
+                                            },
+                                            {
+                                                company: "Tesla",
+                                                position: "Data Analyst",
+                                                date: "Oct 10, 2025",
+                                                platform: "LinkedIn",
+                                                status: "Offer Received",
+                                            },
+                                        ].map((job) => (
+                                            <div
+                                                key={job.company + job.position}
+                                                className="grid grid-cols-5 text-sm py-2 border-t border-border/50 items-center"
+                                            >
+                                                <div>{job.company}</div>
+                                                <div>{job.position}</div>
+                                                <div>{job.date}</div>
+                                                <div>{job.platform}</div>
+                                                <div
+                                                    className={`
+                                                        font-semibold 
+                                                        ${
+                                                            job.status === "Offer Received"
+                                                                ? "text-green-500"
+                                                                : job.status === "Interview Scheduled"
+                                                                ? "text-blue-500"
+                                                                : job.status === "In Review"
+                                                                ? "text-yellow-500"
+                                                                : "text-muted-foreground"
+                                                        }
+                                                    `}
+                                                >
+                                                    {job.status}
+                                                </div>
                                             </div>
                                         ))}
                                     </div>
@@ -145,7 +196,7 @@ const Analysis = () => {
                 </Container>
             </div>
         </div>
-    )
+    );
 };
 
 export default Analysis;
