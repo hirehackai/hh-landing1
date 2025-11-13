@@ -72,16 +72,16 @@ const Integration = () => {
             {/* Heading */}
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto lg:absolute lg:top-1/4 inset-x-0 mt-12 lg:mt-0">
                 <h2 className="text-2xl md:text-4xl lg:text-6xl font-heading font-semibold !leading-snug">
-                    Seamless Platform <br />
-                    <span className="font-subheading italic text-orange-500">Integrations</span>
+                    Unlimited Companies <br />
+                    <span className="font-subheading italic text-orange-500">Single Platform</span>
                 </h2>
             </div>
 
             {/* CTA */}
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto lg:absolute lg:bottom-1/4 inset-x-0 z-20 mt-8 lg:mt-0">
-                <Link href="#">
+                <Link href="https://app.hirehack.ai" target="/">
                     <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-                        See All Integrations
+                        Start Applying
                         <ArrowRightIcon className="size-4 ml-2" />
                     </Button>
                 </Link>
