@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "../global/container";
-import Icons from "../global/icons";
+
 
 const Footer = () => {
     return (
@@ -10,7 +10,7 @@ const Footer = () => {
                 <Container>
                     <div className="flex flex-col items-start justify-start md:max-w-[240px]">
                         <div className="flex items-center gap-2">
-                            <Icons.icon className="w-auto h-5" />
+                            <img src = '/icons/icon.png' className="w-auto h-5" />
                             <span className="text-base md:text-lg font-medium text-foreground">
                                 HireHack
                             </span>
