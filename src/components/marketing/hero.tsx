@@ -71,7 +71,7 @@ const Hero = () => {
                     </Container>
                     <Container delay={0.2}>
                         <p className="max-w-xl mx-auto mt-2 text-base lg:text-lg text-center text-muted-foreground">
-                            AI-powered automation and insights to maximize your campaigns and grow your brand.
+                        Automate your job applications with AI. Apply smarter, track better, and land interviews faster.
                         </p>
                     </Container>
                     <Container delay={0.25} className="z-20">
