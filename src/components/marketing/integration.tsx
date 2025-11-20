@@ -7,16 +7,18 @@ import Icons from "../global/icons";
 import { Button } from "../ui/button";
 import Ripple from "../ui/ripple";
 
+// ===============================
+// ⭐ UPDATED JOB_PLATFORMS LIST
+// ===============================
 const JOB_PLATFORMS = [
-    { icon: Icons.linkedin, position: "left-3", size: "small", iconSize: "small", className: "hidden lg:flex" },
-    { icon: Icons.tiktok, position: "left-2", size: "medium", iconSize: "medium" },
-    { icon: Icons.insta, position: "left-1", size: "large", iconSize: "large" },
-    { icon: Icons.youtube, position: "right-1", size: "large", iconSize: "large" },
-    { icon: Icons.x, position: "right-2", size: "medium", iconSize: "medium" },
-    { icon: Icons.facebook, position: "right-3", size: "small", iconSize: "small", className: "hidden lg:flex" }
+    { src: "/icons/handshake.png", position: "right-2", size: "large", iconSize: "large", className: "hidden lg:flex" },
+    { src: "/icons/indeed.png", position: "left-2", size: "large", iconSize: "large" },
+    { src: "/icons/glassdoor-icon.svg", position: "left-1", size: "large", iconSize: "large" },
+    { icon: Icons.linkedin, position: "right-1", size: "large", iconSize: "large", className: "hidden lg:flex" },
 ];
 
 const Integration = () => {
+
     const getPositionClasses = (position: string) => {
         switch (position) {
             case "left-3": return "-translate-x-[285px]";
@@ -49,31 +51,31 @@ const Integration = () => {
 
     return (
         <div className="relative flex flex-col items-center justify-center w-full py-20">
+            
+            {/* MOBILE VIEW */}
             <Container className="relative">
-                    {/* Mobile View */}
-                    <div className="relative flex flex-col lg:hidden items-center justify-center overflow-visible">
-                        <div className="absolute top-1/2 -translate-y-1/2 right-1/4 w-3/5 h-14 lg:h-20 
-                            bg-gradient-to-r from-orange-400 to-orange-500 rounded-full -rotate-12 blur-[6.5rem] -z-10"></div>
+                <div className="relative flex flex-col lg:hidden items-center justify-center overflow-visible">
+                    <div className="absolute top-1/2 -translate-y-1/2 right-1/4 w-3/5 h-14 lg:h-20 
+                        bg-gradient-to-r from-orange-400 to-orange-500 rounded-full -rotate-12 blur-[6.5rem] -z-10"></div>
 
-                        <div className="hidden md-hidden-block max-w-sm w-full h-auto mx-auto mt-8">
-                            <Image
-                                src="/icons/icon.png"
-                                alt="HireHack Logo"
-                                width={1000}
-                                height={1000}
-                                className="w-full h-auto"
-                                priority
-                            />
-                        </div>
+                    <div className="hidden md-hidden-block max-w-sm w-full h-auto mx-auto mt-8">
+                        <Image
+                            src="/icons/icon.png"
+                            alt="HireHack Logo"
+                            width={1000}
+                            height={1000}
+                            className="w-full h-auto"
+                            priority
+                        />
                     </div>
-                </Container>
+                </div>
+            </Container>
 
-
-            {/* Heading */}
+            {/* HEADING */}
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto lg:absolute lg:top-1/4 inset-x-0 mt-12 lg:mt-0">
                 <h2 className="text-2xl md:text-4xl lg:text-6xl font-heading font-semibold !leading-snug">
-                    Unlimited Companies <br />
-                    <span className="font-subheading italic text-orange-500">Single Platform</span>
+                    Seamless Platform <br />
+                    <span className="font-subheading italic text-orange-500">Integerations</span>
                 </h2>
             </div>
 
@@ -87,19 +89,20 @@ const Integration = () => {
                 </Link>
             </div>
 
-            {/* Desktop Visual */}
+            {/* DESKTOP VISUAL */}
             <Container delay={0.3}>
                 <div className="relative hidden lg:flex items-center justify-center overflow-visible">
-                    {/* Orange Glow Background */}
+                    
+                    {/* Orange Glow */}
                     <div className="absolute top-1/2 -translate-y-1/2 right-1/4 w-3/5 h-14 lg:h-20 
                         bg-gradient-to-r from-orange-400 to-orange-500 rounded-full -rotate-12 blur-[6.5rem] -z-10"></div>
 
-                    {/* Ripple Animation */}
+                    {/* Ripple */}
                     <div className="relative flex h-dvh w-full flex-col items-center justify-center overflow-visible">
                         <Ripple />
                     </div>
 
-                    {/* HireHack Logo Center (using icon.png) */}
+                    {/* Center HireHack Logo */}
                     <div className="absolute z-20 flex items-center justify-center group">
                         <Image
                             src="/icons/icon.png"
@@ -111,7 +114,7 @@ const Integration = () => {
                         />
                     </div>
 
-                    {/* Platform Icons */}
+                    {/* PLATFORM ICONS */}
                     {JOB_PLATFORMS.map((platform, index) => (
                         <div
                             key={index}
@@ -122,12 +125,33 @@ const Integration = () => {
                                 platform.className
                             )}
                         >
-                            <platform.icon
-                                className={cn(
-                                    "text-foreground",
-                                    getIconSizeClasses(platform.iconSize)
-                                )}
-                            />
+                            {/* ⭐ FIX: SUPPORT BOTH IMAGE & COMPONENT ICONS SAFELY */}
+                            {(() => {
+                                if (platform.src) {
+                                    return (
+                                        <Image
+                                            src={platform.src}
+                                            alt="Platform Icon"
+                                            width={80}
+                                            height={80}
+                                            className={cn(
+                                                "object-contain",
+                                                getIconSizeClasses(platform.iconSize)
+                                            )}
+                                        />
+                                    );
+                                }
+
+                                const IconComponent = platform.icon;
+                                return IconComponent ? (
+                                    <IconComponent
+                                        className={cn(
+                                            "text-foreground",
+                                            getIconSizeClasses(platform.iconSize)
+                                        )}
+                                    />
+                                ) : null;
+                            })()}
                         </div>
                     ))}
                 </div>
