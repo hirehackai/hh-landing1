@@ -109,7 +109,7 @@ const Integration = () => {
                             alt="HireHack Logo"
                             width={96}
                             height={96}
-                            className="rounded-full group-hover:scale-110 transition-all duration-500"
+                            className="rounded-lg group-hover:scale-110 transition-all duration-500"
                             priority
                         />
                     </div>
