@@ -15,16 +15,13 @@ const Navbar = () => {
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center gap-2">
                             <Image
-                                src="/icons/icon.png"
+                                src="/icons/hirehack-dark.png"
                                 alt="HireHack Logo"
-                                width={28}
-                                height={28}
+                                width={120}
+                                height={60}
                                 className="object-contain"
                                 priority
                             />
-                            <span className="text-xl font-semibold hidden lg:block">
-                                HireHack
-                            </span>
                         </Link>
                     </div>
 
