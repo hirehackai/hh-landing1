@@ -18,7 +18,7 @@ const Pricing = () => {
     setBillPlan((prev) => (prev === "monthly" ? "annually" : "monthly"));
 
   return (
-    <div className="relative flex flex-col items-center justify-center max-w-5xl py-20 mx-auto">
+    <div className="relative flex flex-col items-center justify-center max-w-5xl pb-20 mx-auto">
       <Container>
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">

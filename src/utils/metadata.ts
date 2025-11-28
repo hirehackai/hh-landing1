@@ -16,7 +16,7 @@ interface MetadataProps {
 }
 
 export const generateMetadata = ({
-    title = `HireHack AI | Automate Job Applications & Optimize Your Job Search`,
+    title = `HireHack.ai | Automate Job Applications & Optimize Your Job Search`,
     description = `HireHack AI automates job applications, optimizes resumes, tracks applications, and accelerates your job search using AI-driven workflows. Apply faster, smarter, and effortlessly with HireHack.`,
     icons = [
         {
