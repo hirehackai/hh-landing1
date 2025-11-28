@@ -8,11 +8,20 @@ export const NAV_LINKS = [
         href: "/#features"
     },
     {
-        name: "Blog",
-        href: "/blog"
-    },
-    {
         name: "FAQ",
         href: "/#faq"
     },
+    {
+        name: "Blog",
+        href: "/blog"
+    },    
+    {
+        name: "Privacy Policy",
+        href: "/privacy"
+    },
+    {
+        name: "Terms and Conditions",
+        href: "/terms"
+    },
+
 ];
