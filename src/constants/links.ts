@@ -15,13 +15,5 @@ export const NAV_LINKS = [
         name: "Blog",
         href: "/blog"
     },    
-    {
-        name: "Privacy Policy",
-        href: "/privacy"
-    },
-    {
-        name: "Terms and Conditions",
-        href: "/terms"
-    },
 
 ];
