@@ -5,6 +5,7 @@ import { base, heading } from "@/constants";
 import { Toaster } from "@/components/ui/sonner";
 import { subheading } from "@/constants/fonts";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = generateMetadata();
 
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <Toaster richColors theme="dark" position="top-right" />
         {children}
+        <Analytics />
       </body>
     </html>
   );
