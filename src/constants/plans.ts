@@ -39,9 +39,9 @@ export type PLAN = {
       features: [
         "Unlimited auto applications",
         "Advanced job alerts",
-        "Resume analytics & AI feedback",
+        "Resume analytics & AI feedback (Coming Soon)",
         "Application tracking dashboard",
-        "Multiple Resumes",
+        "Early access to new features",
         "Advanced Filters",
         "Priority support",
       ],
