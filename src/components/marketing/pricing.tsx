@@ -76,7 +76,14 @@ const PlanCard = ({ plan, billPlan }: { plan: PLAN; billPlan: BillingPlan }) => 
       <div className="p-6 flex flex-col items-start w-full relative">
         <h2 className="font-medium text-xl text-foreground">{plan.title}</h2>
         <p className="text-sm text-muted-foreground mt-2">{plan.desc}</p>
-
+        {plan.originalPrice && billPlan === "monthly" && (
+          <div className="flex items-center gap-2 mt-8">
+            <span className="text-muted-foreground line-through text-3xl font-medium">${plan.originalPrice}</span>
+            <span className="bg-red-500 text-white text-[10px] font-bold uppercase tracking-tight px-2 py-0.5 rounded-full">
+              Early Bird
+            </span>
+          </div>
+        )}
         <h3 className="mt-5 text-3xl font-medium md:text-5xl text-orange-500">
           <NumberFlow
             value={billPlan === "monthly" ? plan.monthlyPrice : plan.annuallyPrice}
@@ -88,6 +95,7 @@ const PlanCard = ({ plan, billPlan }: { plan: PLAN; billPlan: BillingPlan }) => 
             }}
           />
         </h3>
+
       </div>
 
       <div className="flex flex-col items-start w-full px-6">
