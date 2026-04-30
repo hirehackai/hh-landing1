@@ -26,7 +26,7 @@ export default function RootLayout({
         <Script
           id="elu-analytics"
           async
-          src="https://elu.dev/v1/elu_pk_live_VcGtS9LlOCq57CSbKQJFa1LzjW.js"
+          src="https://elu.dev/v1/elu_pk_live_eOg22K2YfsAlsZt1c7MkIE5eFh.js"
         />
       </head>
 
