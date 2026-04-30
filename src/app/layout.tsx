@@ -23,6 +23,11 @@ export default function RootLayout({
           data-pid="iGfemmUxAObuXE2K"
           data-version="062024"
         />
+        <Script
+          id="elu-analytics"
+          async
+          src="https://elu.dev/v1/elu_pk_live_VcGtS9LlOCq57CSbKQJFa1LzjW.js"
+        />
       </head>
 
       <body
